@@ -1,0 +1,243 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tableLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <TableRow
+        android:id="@+id/tableRowToolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#3399FF"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:id="@+id/layoutToolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnNewFile"
+                android:layout_width="@dimen/btn_top_bar_width"
+                android:layout_height="@dimen/btn_top_bar_height"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_blue"
+                android:nestedScrollingEnabled="true"
+                android:onClick="newFile"
+                android:scaleType="fitCenter"
+                android:singleLine="false"
+                android:src="@drawable/btn_new_file"
+                android:text="File"
+                android:padding="4dp" />
+
+            <ImageButton
+                android:id="@+id/btnOpen"
+                android:layout_width="@dimen/btn_top_bar_width"
+                android:layout_height="@dimen/btn_top_bar_height"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_blue"
+                android:scaleType="fitCenter"
+                android:src="@drawable/btn_open_file"
+                android:text="Open"
+                android:onClick="loadFromFile"
+                android:padding="4dp" />
+
+
+            <ImageButton
+                android:id="@+id/btnSave"
+                android:layout_width="@dimen/btn_top_bar_width"
+                android:layout_height="@dimen/btn_top_bar_height"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_blue"
+                android:scaleType="fitCenter"
+                android:singleLine="false"
+                android:src="@drawable/btn_save"
+                android:text="Save"
+                android:onClick="saveToFile"
+                android:padding="4dp" />
+
+            <ImageButton
+                android:id="@+id/btnPlay"
+                android:layout_width="@dimen/btn_top_bar_width"
+                android:layout_height="@dimen/btn_top_bar_height"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_blue"
+                android:onClick="play"
+                android:scaleType="fitXY"
+                android:src="@drawable/btn_play"
+                android:text="Play"
+                android:padding="4dp" />
+
+            <ImageButton
+                android:id="@+id/btnStop"
+                android:layout_width="@dimen/btn_top_bar_width"
+                android:layout_height="@dimen/btn_top_bar_height"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_blue"
+                android:onClick="stop"
+                android:scaleType="fitCenter"
+                android:src="@drawable/btn_stop"
+                android:text="Stop"
+                android:padding="4dp" />
+
+
+            <CheckBox
+                android:id="@+id/checkLoop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:singleLine="false"
+                android:text="Loop"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </TableRow>
+
+    <ScrollView
+        android:id="@+id/scrollViewDrums"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/layoutSequencer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layoutDrums"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutDummy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <HorizontalScrollView
+                    android:id="@+id/scrollViewTicksHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="2">
+
+                    <LinearLayout
+                        android:id="@+id/layoutSequencerTicks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#3399FF"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAddDrum"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:onClick="addDrum"
+            android:text="+"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="3dp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/btn_blue">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:text="Clear"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:onClick="clear"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="3dp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/btn_blue">
+
+        </Button>
+
+        <SeekBar
+            android:id="@+id/seekBPM"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:max="270"
+            android:progress="90"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/red_scrubber_progress"
+            android:thumb="@drawable/red_scrubber_control" />
+
+        <TextView
+            android:id="@+id/textBPM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="10dp"
+            android:text="BPM:120"
+            android:textIsSelectable="true"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+
+        <SeekBar
+            android:id="@+id/seekLength"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:max="9"
+            android:progress="3"
+            android:progressDrawable="@drawable/red_scrubber_progress"
+            android:thumb="@drawable/red_scrubber_control"/>
+
+        <TextView
+            android:id="@+id/textLength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="3dp"
+            android:text="Length: 4 beats"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</TableLayout>
+

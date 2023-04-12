@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="btn_stroke">#FFFFFF</color>
+    <color name="btn_stroke_disabled">#FFFFFF</color>
+    <color name="btn_stroke_disabled_focused">#FFFFFF</color>
+    <color name="btn_stroke_focused">#FFFFFF</color>
+    <color name="btn_overlay_blue">#756699FF</color>
+    <color name="btn_grey_dark_disabled">#555555</color>
+    <color name="btn_grey_light_disabled">#666666</color>
+    <color name="btn_grey_dark">#333</color>
+    <color name="btn_grey_light">#666</color>
+    <color name="btn_blue_light">#C2E0FF</color>
+    <color name="btn_blue_dark">#4D94FF</color>
+    <color name="toggle_btn_blue_orange_off_light">#C2E0FF</color>
+    <color name="toggle_btn_blue_orange_off_dark">#4D94FF</color>
+    <color name="toggle_btn_blue_orange_on_light">#FFFF66</color>
+    <color name="toggle_btn_blue_orange_on_dark">#CC7A00</color>
+    <color name="toggle_btn_green_purple_off_light">#99FF66</color>
+    <color name="toggle_btn_green_purple_off_dark">#00CC00</color>
+    <color name="toggle_btn_green_purple_on_light">#FF99CC</color>
+    <color name="toggle_btn_green_purple_on_dark">#CC3399</color>
+    <color name="btn_green_dark">#00CC00</color>
+    <color name="btn_green_light">#99FF66</color>
+</resources>
